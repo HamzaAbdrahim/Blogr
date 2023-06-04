@@ -1,0 +1,290 @@
+:root {
+--White: hsl(0, 0%, 100%);/*(text)*/
+--Grayish-blue: hsl(240, 2%, 79%);  /*(footer text)*/
+--Very_dark_grayish_blue: hsl(207, 13%, 34%); /*(body copy)*/
+--Very-dark-black-blue : hsl(240, 10%, 16%); /*(footer background)*/
+--Light-red : hsl(356, 100%, 66%); /*(CTA text)*/
+--Very-light-red-hover : hsl(355, 100%, 74%); /*(CTA hover background)*/
+--Very-dark-blue : hsl(208, 49%, 24%); /*(headivngs)*/
+/* Background gradient - Intro/CTA mobile nav: */
+
+--Very-light-red: hsl(13, 100%, 72%);
+--Light-red:hsl(353, 100%, 62%);
+
+/*Background gradient - body:*/
+
+--Very-dark-gray-blue: hsl(237, 17%, 21%);
+--Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+.landing-page {
+    background: linear-gradient(to bottom,var(--Very-light-red), var(--Light-red));
+    height: 70vh;
+    border-bottom-left-radius: 5rem 7rem; 
+    }
+    .landing-page::before {
+        content: '';
+        position: absolute;
+        background-image: url(../images/bg-pattern-intro-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        right: -36rem;
+        width: 115%;
+        height: 210vh;
+        top: -45rem;
+        transform: rotate(-7deg);
+        z-index: -1;
+        padding: 125vh;
+    }
+    .list {
+        color: rgba(255, 255, 255, 0.62);
+        height: 1rem;
+    }
+.Sign.Up {
+    color: var(--Light-red);
+}
+.list .dropdown-menu a {
+    color:var(--Very_dark_grayish_blue);
+    font-weight: 400;
+}
+.list > li a {
+    font-size: 15px;
+}
+.list > li::before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/icon-arrow-light.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 14px;
+    height: 12px;
+    top: 60px;
+    margin-left: 71px;
+}
+.list > li.rotate::before {
+    transform: rotate(180deg);
+}
+.Login {
+    color:rgba(255, 255, 255, 0.62);
+}
+.list > li > a:hover {
+    text-decoration: underline;
+    transition: .5s;
+}
+.list  li .dropdown-menu li:hover {
+    text-decoration: underline;
+    transition: .5s;
+}
+
+@media only screen and (max-width:768px) {
+    .landing-page::before {
+    background-image: url(../images/bg-pattern-intro-mobile.svg);
+    right: -23rem;
+    top: -20rem;
+    padding: 80vh;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    header .list,
+    .Singup {
+        flex-direction: column;
+        margin: auto;
+        position: absolute;
+        bottom: 9rem;
+        left: 50%;
+        transform: translate(-50%,8%);
+    }
+    header .list {
+        background-color: white;
+        height: 60vh;
+        font-size:1.3em;
+        display: none;
+        width: 80%;
+        position: absolute;
+        top: 105%;
+        transform: translate(-50% ,-50%);
+        padding: 1rem 0;
+    
+        
+    }
+    .list > li::before{
+        background-image: url(../images/icon-arrow-dark.svg);
+        display: flex;
+        position: relative;
+        top: 1.6rem;
+        right: -10.5rem;
+    }
+    .list > li.rotate::before {
+    transform: rotate(180deg);
+    }
+    .handel {
+        width: 25%;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: -5rem;
+    }
+    .handel > .logo {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+    }
+    .handel .hamburger {
+    position: absolute;
+    right: 5rem;
+    top: 1rem;
+    display: block;
+    }
+    .list > li {
+        margin-bottom: 1rem;
+        margin-right: 0 !important;
+    }
+    .list > li > a {
+        color: var(--Very-dark-black-blue);
+    }
+    .Singup {
+        color: var(--Very-dark-black-blue);
+        display: none;
+        margin-bottom:-8rem;
+    }
+    .Singup .Sign.Up {
+        margin-top: 0.8rem;
+        background: linear-gradient(to right,var(--Very-light-red), var(--Light-red));
+        color: white;
+    }
+    .Singup .Login {
+        color: var(--Very-dark-blue);
+    }
+    .list  li .dropdown-menu {
+        background-color: var(--Grayish-blue);
+        width: 60%;
+        margin: 1rem auto;
+    }
+    }
+
+
+    .list > li {
+        margin-right: 3rem;
+    }
+    .handel .hamburger.rotate span:first-of-type {
+        transform: rotate(45deg);
+    }
+    .handel .hamburger.rotate span:last-of-type {
+        transform: rotate(-45deg);
+        top: 39px;
+    }
+    .handel .hamburger.rotate span:nth-child(2) {
+        display: none;
+    }
+    .Singup.active,
+    header .list.active{
+        display: block;
+    }
+
+.discription  {
+    color: rgba(255, 255, 255, 0.873);
+}
+
+.start {
+    color:var(--Light-red);
+}
+.start:hover,
+.Sign.Up:hover {
+    background-color: var(--Very-light-red-hover);
+}
+
+.learn:hover {
+    color:var(--Light-red);
+}
+
+.futuer > h2 {
+    color: var(--Very-dark-black-blue);
+}
+.one h2 {
+    color: var(--Very-dark-blue);
+}
+.one p {
+    color: var(--Very-dark-gray-blue);
+}
+.futuer .cardPh {
+    height: 40rem;
+    margin-right: -12rem;
+}
+
+.background {
+    background: linear-gradient(to bottom,var(--Very-dark-gray-blue), var(--Very-dark-desaturated-blue));
+    height: 100vh;
+    border-top-right-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+}
+
+.background > img {
+    top: -5rem;
+}
+
+.background .phone {
+    top: -35rem;
+}
+.discrption {
+    color: rgba(255, 255, 255, 0.896);
+}
+
+.discrption p {
+    color: rgba(255, 255, 255, 0.669);
+}
+.cicrcl img {
+    top: -10rem;
+    left: -9rem;
+    height: 90vh;
+    width: 100vh;
+}
+@media (min-width:1024px){
+    .background {
+        height: 60vh;
+    }
+    .cicrcl img {
+        top: -13rem;
+        height: 100vh;
+        width: 59%;
+        left: -11rem;
+    }
+    .list > li .dropdown-menu {
+        position: absolute;
+    }
+    }
+
+    .benfits .laptop {
+        height: 40rem;
+        margin-right: -3rem;
+        margin-left: -15rem;
+    }
+
+    footer {
+        background-color: var(--Very-dark-black-blue);
+        border-top-right-radius: 10rem;
+    }
+
+    .list-footer ul li:not(:last-of-type) {
+        margin-bottom: 17px;
+    }
+    .list-footer ul li:hover {
+        text-decoration: underline;
+        transition: .5s;
+    }
+
+    .footer-text li a {
+        color: rgba(255, 255, 255, 0.694);
+    }
+
+    .scroll {
+        opacity: 1;
+        transition:.5s;
+        bottom: 1rem;
+    }
+
+    .list > li .dropdown-menu.spiner {
+        display: block;
+    } 
