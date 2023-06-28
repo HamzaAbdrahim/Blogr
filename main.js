@@ -1,7 +1,7 @@
 //creat drowpdown menu
 
 let click = document.querySelector('.list').children;
-let menu = document.querySelectorAll('.list > li')
+let menu = document.querySelectorAll('.list > li > a')
 for (let i = 0;i<click.length;i++) {
     click[i].addEventListener('click',function() {
         click[i].lastElementChild.classList.toggle('spiner');
